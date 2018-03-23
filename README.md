@@ -1,2 +1,3 @@
 # spacemacs-quickrun
-quickrun layer for Spacemacs
+
+quickrun layer for Spacemacs.
