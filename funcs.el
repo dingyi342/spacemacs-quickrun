@@ -9,32 +9,46 @@
 ;;
 ;;; License: MIT
 
-(defun spacemacs/quickrun-may-ask-stdin ()
+(defun spacemacs/quickrun-may-ask-stdin-file ()
   (let (
-         (stdin-files
-           (directory-files
-             default-directory
-             nil
-             (concat (quickrun--stdin-file-name) "*")))
-         new-stdin-file)
-    (when (<= 2 (length stdin-files))
-      (setq new-stdin-file
-        (save-window-excursion
+         (executed-file (file-name-nondirectory (buffer-file-name)))
+         new-stdin-file
+         (default-stdin-file-extension
+           (default-value 'quickrun-input-file-extension)))
+    (let (
+           (stdin-files (directory-files
+                          default-directory
+                          nil
+                          (format "%s%s*"
+                            executed-file
+                            default-stdin-file-extension))))
+      (if (<= 2 (length stdin-files))
+        (setq new-stdin-file
           (helm
-            :sources 'helm-source-files-in-current-dir
-            :input (concat
-                     quickrun--executed-file
-                     (default-value 'quickrun-input-file-extension)))))
-      (when new-stdin-file
+            :sources (helm-build-sync-source "Input files"
+                       :candidates stdin-files)
+            :input (concat executed-file default-stdin-file-extension))))
+      (if new-stdin-file
         (setq-local quickrun-input-file-extension
-          (concat "." (file-name-extension (car new-stdin-file))))))))
-
-
-;; cf https://github.com/Codas/spacemacs-config/blob/master/quickrun/packages.el
+          (file-name-extension new-stdin-file t))))))
 
 (defun spacemacs/quickrun ()
   (interactive)
-  (spacemacs/quickrun-may-ask-stdin)
+  (require 'quickrun)
+  (spacemacs/quickrun-may-ask-stdin-file)
   (if (eq evil-state 'visual)
     (quickrun-region (region-beginning) (region-end))
     (quickrun)))
+
+(defun spacemacs/quickrun-with-arg ()
+  (interactive)
+  (require 'quickrun)
+  (spacemacs/quickrun-may-ask-stdin-file)
+  (quickrun-with-arg))
+
+(defun spacemacs/quickrun-shell ()
+  (interactive)
+  (require 'quickrun)
+  (setq-local quickrun-input-file-extension
+    (default-value 'quickrun-input-file-extension))
+  (quickrun-shell))
