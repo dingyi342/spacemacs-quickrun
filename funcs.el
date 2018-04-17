@@ -9,6 +9,8 @@
 ;;
 ;;; License: MIT
 
+;; quickrun
+
 (defun spacemacs/quickrun-may-ask-stdin-file ()
   (let (
          (executed-file (file-name-nondirectory (buffer-file-name)))
