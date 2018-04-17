@@ -11,7 +11,7 @@
 
 ;; quickrun
 
-(defun spacemacs/quickrun-may-ask-stdin-file ()
+(defun spacemacs//quickrun-may-ask-stdin-file ()
   (let (
          (executed-file (file-name-nondirectory (buffer-file-name)))
          new-stdin-file
@@ -37,7 +37,7 @@
 (defun spacemacs/quickrun ()
   (interactive)
   (require 'quickrun)
-  (spacemacs/quickrun-may-ask-stdin-file)
+  (spacemacs//quickrun-may-ask-stdin-file)
   (if (eq evil-state 'visual)
     (quickrun-region (region-beginning) (region-end))
     (quickrun)))
@@ -45,7 +45,7 @@
 (defun spacemacs/quickrun-with-arg ()
   (interactive)
   (require 'quickrun)
-  (spacemacs/quickrun-may-ask-stdin-file)
+  (spacemacs//quickrun-may-ask-stdin-file)
   (quickrun-with-arg))
 
 (defun spacemacs/quickrun-shell ()
