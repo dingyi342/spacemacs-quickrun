@@ -22,3 +22,7 @@ To use this configuration layer, add it to your `~/.spacemacs`. You will need to
 | `SPC c q a` | run current buffer with arguments                    |
 | `SPC c q s` | run current buffer in shell for interactive programs |
 | `SPC c q h` | select configuration and run current buffer          |
+
+# Special Thanks
+
+* [quickrunを魔改造して開発中のプログラムの実行をチョーチョー簡単にする！](http://emacs.rubikitch.com/my-quickrun)
