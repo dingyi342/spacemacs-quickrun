@@ -29,7 +29,9 @@
     :defer t
     :init
     (progn
-      (setq quickrun-option-shebang t)
+      (setq
+        quickrun-focus-p nil
+        quickrun-option-shebang t)
       (spacemacs/declare-prefix "cq" "quickrun")
       (spacemacs/set-leader-keys
         "cqq" #'spacemacs/quickrun
