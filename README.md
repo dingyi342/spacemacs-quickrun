@@ -2,13 +2,25 @@
 
 # Table of Contents
 
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+
+- [spacemacs-quickrun](#spacemacs-quickrun)
+- [Table of Contents](#table-of-contents)
 - [Description](#description)
+    - [Features:](#features)
 - [Install](#install)
 - [Key Bindings](#key-bindings)
+- [Special Thanks](#special-thanks)
+
+<!-- markdown-toc end -->
 
 # Description
 
 This layer adds support for single file executions using [quickrun](https://github.com/syohex/emacs-quickrun).
+
+## Features:
+
+* Single file execution using [emacs-quickrun](https://github.com/syohex/emacs-quickrun).
 
 # Install
 
