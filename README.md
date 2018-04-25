@@ -30,10 +30,10 @@ To use this configuration layer, add it to your `~/.spacemacs`. You will need to
 
 | Key Binding | Description                                          |
 |-------------|------------------------------------------------------|
-| `SPC c q q` | run current buffer                                   |
-| `SPC c q a` | run current buffer with arguments                    |
-| `SPC c q s` | run current buffer in shell for interactive programs |
-| `SPC c q h` | select configuration and run current buffer          |
+| `SPC f q q` | run current buffer                                   |
+| `SPC f q a` | run current buffer with arguments                    |
+| `SPC f q s` | run current buffer in shell for interactive programs |
+| `SPC f q h` | select configuration and run current buffer          |
 
 # Special Thanks
 

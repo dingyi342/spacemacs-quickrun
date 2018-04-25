@@ -32,9 +32,9 @@
       (setq
         quickrun-focus-p nil
         quickrun-option-shebang t)
-      (spacemacs/declare-prefix "cq" "quickrun")
+      (spacemacs/declare-prefix "fq" "quickrun")
       (spacemacs/set-leader-keys
-        "cqq" #'spacemacs/quickrun
-        "cqa" #'spacemacs/quickrun-with-arg
-        "cqs" #'spacemacs/quickrun-shell
-        "cqh" #'helm-quickrun))))
+        "fqq" #'spacemacs/quickrun
+        "fqa" #'spacemacs/quickrun-with-arg
+        "fqs" #'spacemacs/quickrun-shell
+        "fqh" #'helm-quickrun))))
