@@ -42,4 +42,6 @@
         "cqq" #'spacemacs/quickrun
         "cqa" #'spacemacs/quickrun-with-arg
         "cqs" #'spacemacs/quickrun-shell
-        "cqh" #'helm-quickrun))))
+        "cqh" #'helm-quickrun)
+      (eval-after-load 'evil
+        '(evil-define-key 'normal quickrun--mode-map "q" #'quit-window)))))
