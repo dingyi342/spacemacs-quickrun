@@ -11,8 +11,13 @@
 
 (setq spacemacs-quickrun-packages
       '(
+        golden-ratio
         popwin
         quickrun))
+
+(defun spacemacs-quickrun/post-init-golden-ratio ()
+  (eval-after-load 'golden-ratio
+    '(add-to-list 'golden-ratio-exclude-buffer-names "*quickrun*")))
 
 (defun spacemacs-quickrun/post-init-popwin ()
   (push
