@@ -39,7 +39,7 @@
         quickrun-option-shebang t)
       (spacemacs/declare-prefix "fq" "quickrun")
       (spacemacs/set-leader-keys
-        "fqq" #'spacemacs/quickrun
-        "fqa" #'spacemacs/quickrun-with-arg
-        "fqs" #'spacemacs/quickrun-shell
-        "fqh" #'helm-quickrun))))
+        "cqq" #'spacemacs/quickrun
+        "cqa" #'spacemacs/quickrun-with-arg
+        "cqs" #'spacemacs/quickrun-shell
+        "cqh" #'helm-quickrun))))
