@@ -10,8 +10,7 @@
 ;;; License: MIT
 
 (setq quickrun-packages
-      '(
-        golden-ratio
+      '(golden-ratio
         popwin
         quickrun))
 
@@ -21,13 +20,13 @@
 
 (defun quickrun/post-init-popwin ()
   (push
-    '("*quickrun*"
-       :dedicated t
-       :position bottom
-       :stick t
-       :noselect nil
-       :height 0.4)
-    popwin:special-display-config))
+   '("*quickrun*"
+     :dedicated t
+     :position bottom
+     :stick t
+     :noselect nil
+     :height 0.4)
+   popwin:special-display-config))
 
 (defun quickrun/init-quickrun ()
   (use-package quickrun
@@ -35,13 +34,12 @@
     :init
     (progn
       (setq
-        quickrun-focus-p nil
-        quickrun-option-shebang t)
+       quickrun-focus-p nil
+       quickrun-option-shebang t)
       (spacemacs/declare-prefix "cq" "quickrun")
       (spacemacs/set-leader-keys
         "cqq" #'spacemacs/quickrun
         "cqa" #'spacemacs/quickrun-with-arg
-        "cqs" #'spacemacs/quickrun-shell
         "cqh" #'helm-quickrun)
       (eval-after-load 'evil
         '(evil-define-key 'normal quickrun--mode-map "q" #'quit-window)))))

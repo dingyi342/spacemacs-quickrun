@@ -46,10 +46,3 @@
   (interactive)
   (setq quickrun-option-args nil)
   (spacemacs/quickrun))
-
-(defun spacemacs/quickrun-shell ()
-  (interactive)
-  (require 'quickrun)
-  (setq-local quickrun-input-file-extension
-    (default-value 'quickrun-input-file-extension))
-  (quickrun-shell))
