@@ -9,17 +9,17 @@
 ;;
 ;;; License: MIT
 
-(setq spacemacs-quickrun-packages
+(setq quickrun-packages
       '(
         golden-ratio
         popwin
         quickrun))
 
-(defun spacemacs-quickrun/post-init-golden-ratio ()
+(defun quickrun/post-init-golden-ratio ()
   (eval-after-load 'golden-ratio
     '(add-to-list 'golden-ratio-exclude-buffer-names "*quickrun*")))
 
-(defun spacemacs-quickrun/post-init-popwin ()
+(defun quickrun/post-init-popwin ()
   (push
     '("*quickrun*"
        :dedicated t
@@ -29,7 +29,7 @@
        :height 0.4)
     popwin:special-display-config))
 
-(defun spacemacs-quickrun/init-quickrun ()
+(defun quickrun/init-quickrun ()
   (use-package quickrun
     :defer t
     :init
