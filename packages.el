@@ -31,7 +31,7 @@
 
 (defun quickrun/init-quickrun ()
   (use-package quickrun
-    :defer t
+    :defer (spacemacs/defer)
     :init
     (progn
       (setq
