@@ -49,10 +49,8 @@
 
 (defun spacemacs/quickrun-create-stdin-file ()
   (interactive)
-  (setq helm-ff-default-directory (file-name-directory (buffer-file-name)))
-  (helm :sources 'helm-source-find-files
-        :input (concat (file-name-nondirectory (buffer-file-name)) ".qrinput")
+  (helm :sources (helm-make-source "Create File" 'helm-source-ffiles)
+        :input (concat (buffer-file-name) ".qrinput")
         :prompt "Filename: "
         :resume 'noresume
-        :buffer "*helm create stdin file*")
-  (setq helm-ff-default-directory nil))
+        :buffer "*helm create stdin file*"))
