@@ -35,7 +35,6 @@
 
 (defun spacemacs/quickrun ()
   (interactive)
-  (require 'window-purpose)
   (require 'quickrun)
   (spacemacs//quickrun-may-ask-args)
   (spacemacs//quickrun-may-ask-stdin-file)
