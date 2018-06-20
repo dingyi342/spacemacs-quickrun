@@ -41,6 +41,7 @@
       (spacemacs/set-leader-keys
         "cqq" #'spacemacs/quickrun
         "cqa" #'spacemacs/quickrun-with-arg
-        "cqh" #'helm-quickrun)
+        "cqh" #'helm-quickrun
+        "cqs" #'spacemacs/quickrun-create-stdin-file)
       (eval-after-load 'evil
         '(evil-define-key 'normal quickrun--mode-map "q" #'quit-window)))))

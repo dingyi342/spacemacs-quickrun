@@ -19,11 +19,12 @@ file.
 
 * Key Bindings
 
-| Key Binding | Description                                          |
-|-------------+------------------------------------------------------|
-| =SPC c q a= | run current buffer with arguments                    |
-| =SPC c q h= | select configuration and run current buffer          |
-| =SPC c q q= | run current buffer or visual region                  |
+| Key Binding | Description                                 |
+|-------------+---------------------------------------------|
+| =SPC c q a= | run current buffer with arguments           |
+| =SPC c q h= | select configuration and run current buffer |
+| =SPC c q q= | run current buffer or visual region         |
+| =SPC c q s= | create a .qrinput file of current buffer    |
 
 * Special Thanks
 - [[http://emacs.rubikitch.com/my-quickrun][quickrun を魔改造して開発中のプログラムの実行をチョーチョー簡単にする！]]
