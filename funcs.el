@@ -49,6 +49,7 @@
 
 (defun spacemacs/quickrun-create-stdin-file ()
   (interactive)
+  (require 'tramp)
   (helm :sources (helm-make-source "Create File" 'helm-source-ffiles)
         :input (concat (buffer-file-name) ".qrinput")
         :prompt "Filename: "
