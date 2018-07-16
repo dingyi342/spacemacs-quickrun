@@ -3,7 +3,7 @@
 ;; Copyright (c) 2018 Seong Yong-ju
 ;;
 ;; Author: Seong Yong-ju <sei40kr@gmail.com>
-;; URL: https://github.com/sei40kr/dotfiles
+;; URL: https://github.com/sei40kr/spacemacs-quickrun
 ;;
 ;; This file is not part of GNU Emacs
 ;;
